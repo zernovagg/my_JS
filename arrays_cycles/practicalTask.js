@@ -80,6 +80,20 @@ function isPrime(n) {
   // otherwise, n is prime number.
   return true;
 }
+/**** 
+let n = 10;
+
+nextPrime:
+for (let i = 2; i <= n; i++) { // for each i...
+
+  for (let j = 2; j < i; j++) { // look for a divisor..
+    if (i % j == 0) continue nextPrime; // not a prime, go next i
+  }
+
+  alert( i ); // a prime
+}
+*/
+
 
 /***********************************************************
  * Implement a loop that prints odd numbers to the console
@@ -106,3 +120,14 @@ function isOdd(n) {
     return false;
   } else return true; // otherwise, n is odd number.
 }
+
+/***  without function
+  for (let i = 0; i < 10; i++) {
+
+  // if true, skip the remaining part of the body
+  if (i % 2 == 0) continue;
+
+  alert(i); // 1, then 3, 5, 7, 9
+}
+
+*/
