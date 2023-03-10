@@ -92,7 +92,7 @@ let maxODD = 8;
 
 // check for every number from 1 to N
 for (let i = minOdd; i <= maxODD; i++) {
-  // check if current number is prime
+  // check if current number is odd
   if (isOdd(i)) {
     console.log(i);
   }
