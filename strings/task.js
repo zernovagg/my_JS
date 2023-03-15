@@ -16,4 +16,4 @@ console.log(strn.match(regexp2));
 let date = new Date();
 console.log("The year is ",date.getFullYear());
 console.log("The month is ",date.getMonth());
-console.log("The day is",date.getDay());
+console.log("The day is",date.getDate());
