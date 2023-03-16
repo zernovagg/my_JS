@@ -5,22 +5,24 @@ try {
   let a = 3;
 } catch (err) {
   console.log(`let muust be declared!`);
+  //console.log(err.name);
+  //console.log(err.message);
+  //console.log(err.stack);
 }
+
+let a = 1;
+let b = 0;
 
 try {
-  console.log(1 / 0); // no error
-  console.log(
-    `no error via compilation, but cannot be divided by zero according to the task`
-  );
+  
+  if (b === 0) {
+    throw new SyntaxError("cannot be divided by zero"); // (*)
+  }
+ 
 } catch (err) {
-  console.log(`cannot be divided by zero`);
-}
+  console.log("cannot be executed, the reason is:  " + err.message);
+} finally {  console.log(a / b); // no error
+             console.log(  `no error via compilation, but division by zero should be catched according to the task`);
+            }
 
-/**** 
 
-if (1 / 0) console.log(`cannot be divided by zero`);
-else console.log("false");
-
-if (!(1 / 0)) console.log(`cannot be divided by zero`);
-else console.log("false");
-*/
